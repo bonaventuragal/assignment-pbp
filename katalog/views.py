@@ -2,7 +2,7 @@ from django.shortcuts import render
 from katalog.models import CatalogItem
 
 def show_catalog(req):
-    catalog_data = CatalogItem.objects.all()
+    catalog_data = CatalogItem.objects.all()    
     context = {
         "nama": "Bonaventura Galang Kristabel Angipanglipur Hatmasasmita",
         "npm": "2106630025",

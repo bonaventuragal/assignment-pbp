@@ -2,6 +2,13 @@
 
 [Deployment Link](https://assignment-2-bonaventuragal.herokuapp.com/)
 
+## Bagan
+![Bagan](../static/bagan.png?raw=true)
+- Request dari user akan dihandle oleh URLConf untuk diarahkan ke views yang sesuai.
+- Views akan menjalankan logic yang sudah dirancang sebelumnya, misalnya query database melalui models. Di akhir, views akan mengembalikan response kepada user. Response dapat berupa file HTML yang akan ditampilkan kepada user. File HTML yang ditampilkan diperoleh dari template yang sesuai.
+- Models menjadi penghubung antara views dan database. Models akan menerima query dari views, mengakses database sesuai query tersebut, kemudian mengembalikan response dari query tersebut.
+- Template menyediakan file HTML yang dapat dikirim oleh views kembali ke user dan kemudian ditampilkan ke user.
+
 ## Virtual Environment
 ### Mengapa menggunakan virtual environment?
 Virtual Environment digunakan untuk mengisolasi packages dan dependencies yang digunakan pada project ini. Penginstalan packages dan dependencies yang digunakan pada project ini tidak akan mengganggu atau penginstalan packages dan dependencies lain yang ada di komputer atau project lain
