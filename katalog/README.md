@@ -1,6 +1,6 @@
 # Katalog
 
-[Deployment Link](https://assignment2-bonaventuragal.herokuapp.com/)
+[Deployment Link](https://assignment-bonaventuragal.herokuapp.com/)
 
 ## Bagan
 ![Bagan](../static/bagan.png?raw=true)
