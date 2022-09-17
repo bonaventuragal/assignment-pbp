@@ -20,3 +20,10 @@ def show_watchlist_xml(req):
 def show_watchlist_json(req):
     watchlist = MyWatchList.objects.all()
     return HttpResponse(serializers.serialize("json", watchlist), content_type="application/json")
+
+def wathclist_links(req):
+    context = {
+        "nama": "Bonaventura Galang Kristabel Angipanglipur Hatmasasmita",
+        "npm": "2106630025",
+    }
+    return render(req, "watchlist_links.html", context)
