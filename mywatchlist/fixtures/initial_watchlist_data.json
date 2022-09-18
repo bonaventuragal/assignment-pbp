@@ -3,7 +3,7 @@
         "model": "mywatchlist.mywatchlist",
         "pk": 1,
         "fields": {
-            "watched": false,
+            "watched": true,
             "title": "Film 1",
             "rating": "5",
             "release_date": "2010-01-01",
@@ -14,7 +14,7 @@
         "model": "mywatchlist.mywatchlist",
         "pk": 2,
         "fields": {
-            "watched": false,
+            "watched": true,
             "title": "Film 2",
             "rating": "5",
             "release_date": "2011-01-01",
@@ -25,7 +25,7 @@
         "model": "mywatchlist.mywatchlist",
         "pk": 3,
         "fields": {
-            "watched": false,
+            "watched": true,
             "title": "Film 3",
             "rating": "5",
             "release_date": "2012-01-01",
@@ -36,7 +36,7 @@
         "model": "mywatchlist.mywatchlist",
         "pk": 4,
         "fields": {
-            "watched": false,
+            "watched": true,
             "title": "Film 4",
             "rating": "5",
             "release_date": "2013-01-01",
@@ -80,7 +80,7 @@
         "model": "mywatchlist.mywatchlist",
         "pk": 8,
         "fields": {
-            "watched": false,
+            "watched": true,
             "title": "Film 8",
             "rating": "5",
             "release_date": "2017-01-01",
@@ -91,7 +91,7 @@
         "model": "mywatchlist.mywatchlist",
         "pk": 9,
         "fields": {
-            "watched": false,
+            "watched": true,
             "title": "Film 9",
             "rating": "5",
             "release_date": "2018-01-01",
@@ -102,7 +102,7 @@
         "model": "mywatchlist.mywatchlist",
         "pk": 10,
         "fields": {
-            "watched": false,
+            "watched": true,
             "title": "Film 10",
             "rating": "5",
             "release_date": "2019-01-01",

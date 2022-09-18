@@ -18,7 +18,7 @@
       <th>Review</th>
       <th>Watched</th>
     </tr>
-    {% comment %} Add the data below this line {% endcomment %}
+
     {% for film in watchlist %}
         <tr>
             <td>{{film.title}}</td>
@@ -29,5 +29,11 @@
         </tr>
     {% endfor %}
   </table>
+
+  {% if films_watched >= films_not_watched %}
+    <p>Selamat, kamu sudah banyak menonton!</p>
+  {% else %}
+    <p>Wah, kamu masih sedikit menonton!</p>
+  {% endif %}
 
  {% endblock content %}
