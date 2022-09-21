@@ -1,6 +1,6 @@
 # My Watchlist
 
-[Deployment Link](https://assignment-bonaventuragal.herokuapp.com/)
+[Deployment Link](https://assignment-bonaventuragal.herokuapp.com/mywatchlist)
 
 ## Perbedaan JSON, XML, HTML
 Dalam merepresentasikan data, JSON (JavaScript Object Notation) menggunakan notasi objek JavaScript untuk merepresentasikan data, sedangkan XML (eXtensible Markup Language) merepresentasikan data dalam bentuk element tree, mirip seperti HTML. HTML merepresentasikan data dalam bentuk element tree, tetapi data yang direpresentasikan lebih ditujukan untuk ditampilkan pada web browser.
