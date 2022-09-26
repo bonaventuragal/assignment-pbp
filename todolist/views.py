@@ -33,6 +33,18 @@ def create_task(req):
 
     return render(req, "add_task.html", context={"form": form})
 
+@login_required(login_url='/todolist/login/')
+def change_status(req, id):
+    task = Task.objects.get(id=id)
+    task.is_finished = not(task.is_finished)
+    task.save()
+    return redirect('todolist:todolist')
+
+@login_required(login_url='/todolist/login/')
+def delete(req, id):
+    Task.objects.get(id=id).delete()
+    return redirect('todolist:todolist')
+
 def register(req):
     form = UserCreationForm()
 

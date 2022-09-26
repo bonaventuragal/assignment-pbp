@@ -4,11 +4,13 @@
 <h5>User: </h5>
 <p>{{username}}</p>
 
-<table>
+<table border="1">
     <tr>
     <th>Tanggal</th>
     <th>Judul</th>
     <th>Deskripsi</th>
+    <th>Status</th>
+    <th>Actions</th>
     </tr>
     
     {% for task in list_task %}
@@ -16,6 +18,17 @@
             <td>{{task.date}}</td>
             <td>{{task.title}}</td>
             <td>{{task.description}}</td>
+
+            {% if task.is_finished %}
+              <td>Finished</td>
+            {% else %}
+              <td>Not Finished</td>
+            {% endif %}
+
+            <td>
+              <button><a href="{% url 'todolist:change_status' task.id %}">Change Status</a></button>
+              <button><a href="{% url 'todolist:delete' task.id %}">Delete</a></button>
+            </td>
         </tr>
     {% endfor %}
 </table>
