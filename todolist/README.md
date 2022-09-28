@@ -3,7 +3,7 @@
 [Deployment Link](https://assignment-bonaventuragal.herokuapp.com/todolist)
 
 ## Kegunaan `{% csrf_token %}`
-`{% csrf_token %}` berguna untuk melindungi dari CSRF (Cross Site Request Forgery) Attack. Tanpa `{% csrf_token %}`, form yang ada tetap dapat bekerja dengan baik, tetapi website lain yang tidak terpercaya bisa saja mengakses website kita dan mengisi form tersebut.
+`{% csrf_token %}` berguna untuk melindungi dari CSRF (Cross Site Request Forgery) Attack. Tanpa `{% csrf_token %}`, akan terjadi error setelah submit form dikarenakan input yang diterima gagal diverifikasi.
 
 ## Membuat `<form>` secara manual
 Kita tetap dapat membuat form secara manual tanpa memanfaatkan generator. Caranya adalah membuat elemen `<form>`, kemudian mengisi form tersebut dengan elemen `<input>` yang sesuai dengan keinginan kita. Pastikan pula terdapat `<input type="submit">` untuk meng-submit form tersebut.
