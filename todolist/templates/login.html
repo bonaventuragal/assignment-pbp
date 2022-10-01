@@ -6,40 +6,41 @@
 
 {% block content %}
 
-<div class = "login">
-
-    <h1>Login</h1>
-
-    <form method="POST" action="">
-        {% csrf_token %}
-        <table>
-            <tr>
-                <td>Username: </td>
-                <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
-            </tr>
-                    
-            <tr>
-                <td>Password: </td>
-                <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td><input class="btn login_btn" type="submit" value="Login"></td>
-            </tr>
-        </table>
-    </form>
-
-    {% if messages %}
-        <ul>
-            {% for message in messages %}
-                <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}     
+<div class="flex flex-col h-screen justify-center bg-ivory">
+  <div class="flex justify-center">
+    <div class="login flex flex-col bg-robin-egg-blue rounded-lg p-8 gap-4 drop-shadow-2xl">
+    
+        <h1 class="text-xl font-semibold">Login</h1>
+    
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class="flex flex-col gap-2">
+              <div class="flex gap-4">
+                <div class="flex flex-col justify-around gap-2">
+                  <p>Username:</p>
+                  <p>Password:</p>
+                </div>
+                <div class="flex flex-col justify-around gap-2">
+                  <input type="text" name="username" placeholder="Username" class="form-control rounded p-1"></td>
+                  <input type="password" name="password" placeholder="Password" class="form-control rounded p-1">
+                </div>
+              </div>
+              <input class="btn login_btn bg-gainsboro rounded p-1 mx-20 border-2 border-quick-silver active:bg-quick-silver active:shadow-lg active:border-black" type="submit" value="Login">
+            </div>
+        </form>
+    
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}     
         
-    Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a>
-
+        <p class="text-xs">Belum mempunyai akun? <span><a href="{% url 'todolist:register' %}" class="underline">Buat Akun</a><span></p>
+    
+    </div>
+  </div>
 </div>
 
 {% endblock content %}
