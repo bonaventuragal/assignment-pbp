@@ -4,31 +4,49 @@
 <title>Registrasi Akun</title>
 {% endblock meta %}
 
+{% load filters %}
+
 {% block content %}  
 
-<div class = "login">
+<div class="flex flex-col h-screen justify-center bg-ivory">
+  <div class="flex justify-center">
+    <div class = "login flex flex-col bg-robin-egg-blue rounded-lg p-8 gap-4 drop-shadow-2xl">
+        
+        <h1 class="text-xl font-semibold">Register</h1>
+        <div class="border border-corn mb-2"></div>
     
-    <h1>Formulir Registrasi</h1>  
-
-        <form method="POST" >  
-            {% csrf_token %}  
-            <table>  
-                {{ form.as_table }}  
-                <tr>  
-                    <td></td>
-                    <td><input type="submit" name="submit" value="Daftar"/></td>  
-                </tr>  
-            </table>  
-        </form>
-
-    {% if messages %}  
-        <ul>   
-            {% for message in messages %}  
-                <li>{{ message }}</li>  
-                {% endfor %}  
-        </ul>   
-    {% endif %}
-
-</div>  
+            <form method="POST" >
+                {% csrf_token %}
+                <div class="flex flex-col gap-2">
+                  <div class="flex gap-4">
+                    <div class="flex flex-col justify-around gap-2">
+                      <p>Username:</p>
+                      <p>Password:</p>
+                      <p>Confirm Password:</p>
+                    </div>
+                    <div class="flex flex-col justify-around gap-2">
+                      {{ form.username|addclass:"rounded p-1"}}
+                      {{ form.password1|addclass:"rounded p-1"}}
+                      {{ form.password2|addclass:"rounded p-1"}}
+                    </div>
+                  </div>
+                  <td><input type="submit" name="submit" value="Daftar" class="bg-gainsboro rounded p-1 mx-20 border-2 border-quick-silver active:bg-quick-silver active:shadow-lg active:border-black"/></td>  
+                  {{ form.username.errors }}
+                  {{ form.password1.errors }}
+                  {{ form.password2.errors }}
+                </div>
+            </form>
+    
+        {% if messages %}  
+            <ul>   
+                {% for message in messages %}  
+                    <li>{{ message }}</li>  
+                    {% endfor %}  
+            </ul>   
+        {% endif %}
+        <p class="text-xs">Sudah mempunyai akun? <span><a href="{% url 'todolist:login' %}" class="underline text-corn">Login</a><span></p>
+    </div>  
+  </div>
+</div>
 
 {% endblock content %}

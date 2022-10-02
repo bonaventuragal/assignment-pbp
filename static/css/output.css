@@ -588,6 +588,15 @@ video {
   margin-right: 5rem;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .block {
   display: block;
 }
@@ -648,12 +657,16 @@ video {
   border-radius: 0.25rem;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
 .border {
   border-width: 1px;
 }
 
-.border-2 {
-  border-width: 2px;
+.border-b-2 {
+  border-bottom-width: 2px;
 }
 
 .border-quick-silver {
@@ -661,19 +674,19 @@ video {
   border-color: rgb(167 162 162 / var(--tw-border-opacity));
 }
 
-.border-zinc-600 {
+.border-corn {
   --tw-border-opacity: 1;
-  border-color: rgb(82 82 91 / var(--tw-border-opacity));
+  border-color: rgb(255 237 102 / var(--tw-border-opacity));
 }
 
-.border-zinc-400 {
+.border-black {
   --tw-border-opacity: 1;
-  border-color: rgb(161 161 170 / var(--tw-border-opacity));
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
-.border-zinc-500 {
+.border-ivory {
   --tw-border-opacity: 1;
-  border-color: rgb(113 113 122 / var(--tw-border-opacity));
+  border-color: rgb(255 255 234 / var(--tw-border-opacity));
 }
 
 .bg-ivory {
@@ -704,38 +717,28 @@ video {
   line-height: 1.75rem;
 }
 
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .font-semibold {
   font-weight: 600;
 }
 
+.text-corn {
+  --tw-text-opacity: 1;
+  color: rgb(255 237 102 / var(--tw-text-opacity));
+}
+
+.text-orange-red {
+  --tw-text-opacity: 1;
+  color: rgb(255 94 91 / var(--tw-text-opacity));
+}
+
 .underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
-}
-
-.decoration-solid {
-  -webkit-text-decoration-style: solid;
-          text-decoration-style: solid;
 }
 
 .drop-shadow-2xl {
@@ -747,22 +750,9 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.active\:border:active {
-  border-width: 1px;
-}
-
-.active\:border-2:active {
-  border-width: 2px;
-}
-
 .active\:border-black:active {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-
-.active\:bg-black:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .active\:bg-quick-silver:active {

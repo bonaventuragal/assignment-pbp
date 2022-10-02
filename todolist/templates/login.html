@@ -11,6 +11,7 @@
     <div class="login flex flex-col bg-robin-egg-blue rounded-lg p-8 gap-4 drop-shadow-2xl">
     
         <h1 class="text-xl font-semibold">Login</h1>
+        <div class="border border-corn mb-2"></div>
     
         <form method="POST" action="">
             {% csrf_token %}
@@ -37,7 +38,7 @@
             </ul>
         {% endif %}     
         
-        <p class="text-xs">Belum mempunyai akun? <span><a href="{% url 'todolist:register' %}" class="underline">Buat Akun</a><span></p>
+        <p class="text-xs">Belum mempunyai akun? <span><a href="{% url 'todolist:register' %}" class="underline text-corn">Buat Akun</a><span></p>
     
     </div>
   </div>
