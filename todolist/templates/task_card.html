@@ -1,0 +1,33 @@
+<div class="bg-ivory rounded-lg p-4 shadow-md hover:shadow-xl hover:shadow-gray-400">
+  <div class="flex flex-col">
+    <div class="flex justify-between gap-8">
+      <div class="flex flex-col justify-center">
+        <p class="text-lg font-semibold">{{ task.title }}</p>
+      </div>
+      <div class="flex flex-col justify-center">
+        <p class="text-xs font-semibold">{{ task.date }}</p>
+      </div>
+    </div>
+    
+    <div class="border-b-2 border-robin-egg-blue my-2"></div>
+
+    <div class="flex flex-col gap-2">  
+      {% if task.is_finished %}
+        <p class="text-sm font-bold text-granny-smith-apple">Finished</p>
+      {% else %}
+        <p class="text-sm font-bold text-orange-red">Not Finished</p>
+      {% endif %}
+  
+      <p>{{ task.description }}</p>
+  
+      <div class="flex justify-between gap-4">
+        <div class="flex flex-col justify-center rounded bg-orange-red">
+          <a class="text-ivory w-full h-full px-2 py-1" href="{% url 'todolist:delete' task.id %}">Delete</a>
+        </div>
+        <div class="flex flex-col justify-center rounded bg-robin-egg-blue">
+          <a class="text-ivory w-full h-full px-2 py-1" href="{% url 'todolist:change_status' task.id %}">Change Status</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

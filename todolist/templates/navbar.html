@@ -1,0 +1,25 @@
+<div class="fixed top-0 w-screen bg-robin-egg-blue rounded shadow-lg">
+  <div class="flex justify-between py-4 px-8">
+    <div class="flex gap-6">
+      <div class="flex flex-col justify-center">
+        <p class="text-3xl font-bold text-corn">Todolist</p>
+      </div>
+      <div class="flex gap-4">
+        <div class="flex flex-col justify-center">
+          <a class="text-lg text-ivory" href="{% url 'todolist:todolist' %}">Home</a>
+        </div>
+        <div class="flex flex-col justify-center">
+          <a class="text-lg text-ivory" href="{% url 'todolist:create_task' %}">Buat Task</a>
+        </div>
+      </div>
+      </div>
+    <div class="flex gap-4">
+      <div class="flex flex-col justify-center">
+        <p class="text-lg font-semibold text-ivory">Hello, {{ username }}!</p>
+      </div>
+      <div class="flex flex-col justify-center rounded bg-ivory">
+        <a class="text-lg font-semibold text-orange-red w-full h-full px-2 py-1" href="{% url 'todolist:logout' %}">Logout</a>
+      </div>
+    </div>
+  </div>
+</div>

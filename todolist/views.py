@@ -31,7 +31,7 @@ def create_task(req):
     else:
         form = TaskForm()
 
-    return render(req, "add_task.html", context={"form": form})
+    return render(req, "add_task.html", context={"form": form, "username": req.user.username})
 
 @login_required(login_url='/todolist/login/')
 def change_status(req, id):
