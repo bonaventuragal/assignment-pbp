@@ -31,7 +31,9 @@
                         {{ form.description|addclass:"rounded p-1"}}
                       </div>
                     </div>
-                    <td><input type="submit" name="submit" value="Buat Task" class="bg-gainsboro rounded p-1 mx-20 border-2 border-quick-silver active:bg-quick-silver active:shadow-lg active:border-black"/></td>  
+                    <div class="bg-gainsboro rounded mx-20 border-2 border-quick-silver active:bg-quick-silver active:shadow-lg active:border-black">
+                      <input class="p-1 w-full h-full" name="submit" value="Buat Task" type="submit" />
+                    </div>
                     {{ form.title.errors }}
                     {{ form.description.errors }}
                   </div>

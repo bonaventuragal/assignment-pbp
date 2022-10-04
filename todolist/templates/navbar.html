@@ -1,6 +1,6 @@
 <div class="fixed top-0 w-screen bg-robin-egg-blue rounded shadow-lg">
-  <div class="flex justify-between py-4 px-8">
-    <div class="flex gap-6">
+  <div class="flex py-4 px-8 gap-8 justify-between">
+    <div class="flex flex-col md:flex-row gap-4">
       <div class="flex flex-col justify-center">
         <p class="text-3xl font-bold text-corn">Todolist</p>
       </div>
@@ -12,13 +12,17 @@
           <a class="text-lg text-ivory" href="{% url 'todolist:create_task' %}">Buat Task</a>
         </div>
       </div>
-      </div>
-    <div class="flex gap-4">
-      <div class="flex flex-col justify-center">
-        <p class="text-lg font-semibold text-ivory">Hello, {{ username }}!</p>
-      </div>
-      <div class="flex flex-col justify-center rounded bg-ivory">
-        <a class="text-lg font-semibold text-orange-red w-full h-full px-2 py-1" href="{% url 'todolist:logout' %}">Logout</a>
+    </div>
+    <div class="flex">
+      <div class="flex gap-4">
+        <div class="hidden md:flex flex-col justify-center">
+          <p class="text-lg font-semibold text-ivory">Hello, {{ username }}!</p>
+        </div>
+        <div class="flex flex-col justify-center">
+          <div class="rounded bg-ivory py-1">
+            <a class="text-lg font-semibold text-orange-red w-full px-2" href="{% url 'todolist:logout' %}">Logout</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
