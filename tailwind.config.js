@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    important: true,
-    content: ["./templates/**/*.html",
-        "./**/templates/*.html"],
+    content: ["./**/templates/**/*.html"],
     theme: {
         extend: {
             colors: {
@@ -12,7 +10,8 @@ module.exports = {
                 "robin-egg-blue": '#00CECB',
                 "corn": '#FFED66',
                 "quick-silver": '#A7A2A2',
-                "granny-smith-apple": "#80DE99"
+                "green-apple": "#80DE99",
+                "gunmetal": "#1E313BAC",
             },
         }
     },
